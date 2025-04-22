@@ -11,6 +11,11 @@ if [[ ${PV} == 9999 ]] ; then
 	EGIT_REPO_URI="https://github.com/cvmfs/cvmfs.git"
 	EGIT_BRANCH="devel"
 	inherit git-r3
+	# To override fetched repository properties, use:
+	#   EGIT_OVERRIDE_REPO_CVMFS_CVMFS
+	#   EGIT_OVERRIDE_BRANCH_CVMFS_CVMFS
+	#   EGIT_OVERRIDE_COMMIT_CVMFS_CVMFS
+	#   EGIT_OVERRIDE_COMMIT_DATE_CVMFS_CVMFS
 else
 	SRC_URI="https://ecsft.cern.ch/dist/cvmfs/${P}/source.tar.gz -> ${P}.tar.gz"
 fi
